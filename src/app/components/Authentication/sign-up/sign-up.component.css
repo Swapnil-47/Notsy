@@ -6,8 +6,14 @@
 }
 body{
   padding-top:4rem;
-  padding:1.3rem
+  padding:5rem;
 }
 .header{
   font-family: 'Kalam', cursive;
+}
+@media only screen and (max-width: 600px) {
+
+  body{
+    padding:1.3rem
+  }
 }
