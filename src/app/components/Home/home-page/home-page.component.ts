@@ -17,7 +17,7 @@ export class HomePageComponent implements OnInit{
     }
   }
   opened = true;
-  flag="TODO"
+  flag="Notes"
 
   status(status:string){
     this.flag = status
