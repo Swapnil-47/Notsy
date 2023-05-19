@@ -1,0 +1,19 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+ <!-- main content on the right -->
+ <form #note=ngForm (submit)="createNote(note)"class="example-form">
+ <mat-card class="p-3">
+  <mat-form-field class="example-full-width">
+    <mat-label>Title:</mat-label>
+    <input [ngModel]="userYouWantToEdit.title"#title=ngModel ngModel required minlength="2"name="title" matInput placeholder="Title.." value="Sushi">
+    <mat-error *ngIf="title.invalid"></mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Take a note...</mat-label>
+    <textarea [ngModel]="userYouWantToEdit.content"#content=ngModel ngModel required minlength="2" name="content" matInput placeholder="note..."></textarea>
+    <mat-error *ngIf="content.invalid"></mat-error>
+  </mat-form-field>
+  <button type="submit" class="submit" class="btn btn-primary"  style="width: 75px;">Create</button>
+</mat-card>
+</form>

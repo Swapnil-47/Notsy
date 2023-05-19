@@ -1,0 +1,73 @@
+.mat-mdc-form-field + .mat-mdc-form-field {
+  margin-left: 8px;
+
+}
+mat-expansion-panel{
+  /* margin-left: 2rem; */
+  padding:0.9rem;
+  /* margin-top: 0.8rem; */
+}
+body{
+  padding:2rem
+}
+/* .panel-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(120px, auto);
+}
+.mat-expansion-panel {
+  overflow: hidden;
+}
+
+.mat-expansion-panel-content {
+  padding: 16px;
+} */
+.container {
+  display: flex;
+  justify-content: flex-end;
+}
+.delete{
+  margin-left: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  mat-expansion-panel{
+    margin: auto;
+    padding:0.9rem;
+    /* margin-top: 0.8rem; */
+  }
+  mat-panel-description{
+    margin-left:3rem
+  }
+  .delete{
+    margin-left: 0.4rem;
+  }
+  .container{
+    margin-top:2rem;
+    margin-left: 35px;
+    width: auto;
+  }
+  .time{
+    width: auto;
+    padding:7px;
+    cursor: pointer;
+    margin-left:8px;
+    border-radius: 30px;
+  }
+}
+
+.archive,.edit,.delete{
+  /* margin-right: 5px; */
+    padding:7px;
+    cursor: pointer;
+    margin-left:8px;
+    border-radius: 30px;
+    height:40px;
+    width:50px;
+}
+.time{
+  width: auto;
+  padding:7px;
+  cursor: pointer;
+  margin-left:8px;
+  border-radius: 30px;
+}

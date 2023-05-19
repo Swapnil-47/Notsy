@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+<!--
+
+<body class="panel-container">
+  <mat-accordion *ngFor="let note of notes">
+  <mat-expansion-panel (opened)="panelOpenState = true"
+(closed)="panelOpenState = false">
+<mat-expansion-panel-header>
+<mat-panel-title>
+{{note.title}}</mat-panel-title>
+</mat-expansion-panel-header>
+<p>{{note.content}}</p>
+<div class="container">
+    <span class="material-symbols-outlined opacity-75 archive" (click)="archiveNote(note._id)">
+      archive
+    </span>
+    <span class="material-symbols-outlined opacity-75 edit" [routerLink]="['/edit/',note._id]">
+      edit
+    </span>
+    <span class="material-symbols-outlined opacity-75 delete " (click)="deleteNote(note._id)">
+      delete
+    </span> -->
+
+<!--
+  <button mat-flat-button color="primary" [routerLink]="['/edit/',note._id]">Edit</button>
+  <button mat-flat-button (click)="deleteNote(note._id)"class="delete"color="warn">Delete</button> -->
+
+<!-- </div>
+{{note.time}}
+
+</mat-expansion-panel>
+</mat-accordion>
+</body> -->
+
+
+<body class="padding:5rem">
+
+    <div class="card  bg-"style="width:100%; height:auto; margin-top:1rem"  *ngFor="let note of notes">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size:1.0rem;">{{note.title}}</h5>
+      <hr>
+      <p class="card-text" style="color:gray">{{note.content}}</p>
+      <div class="container">
+        <span class="time">
+          {{note.time}}
+        </span>
+        <span class="material-symbols-outlined opacity-75 archive" (click)="archiveNote(note._id)">
+          archive
+        </span>
+        <span class="material-symbols-outlined opacity-75 edit" [routerLink]="['/edit/',note._id]">
+          edit
+        </span>
+        <span class="material-symbols-outlined opacity-75 delete " (click)="deleteNote(note._id)">
+          delete
+        </span>
+
+    </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+
+

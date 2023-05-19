@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<body>
+    <!-- <mat-toolbar color="primary">
+      <button mat-icon-button class="example-icon" (click)="opened=!opened" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <span>
+            Notes
+      </span>
+      <span class="example-spacer"></span> -->
+      <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+      </button>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+      </button> -->
+        <!-- <button (click)="logOut()"style="margin-right: 10px;" class="btn btn-danger">Logout</button> -->
+        <!-- <img src="assets/images/bootstrap-logo (1).svg" style="width: 40px; border-radius:20px" alt=""> -->
+    <!-- </mat-toolbar> -->
+
+    <nav class="navbar bg-dark text-white border-bottom ">
+      <div class="d-flex align-items-center justify-content-between container-fluid">
+        <div class="d-flex align-items-center">
+          <button mat-icon-button class="example-icon" (click)="opened=!opened" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <a class="navbar-brand text-white" style="margin-top: 3px">Notes</a>
+        </div>
+
+        <form class="d-flex align-items-center">
+          <span class="example-spacer"></span>
+          <div class="ml-auto" style="margin-right: 7px;">
+            <button (click)="logOut()" class="btn btn-danger">Logout</button>
+          </div>
+        </form>
+      </div>
+    </nav>
+
+
+
+
+
+  <mat-drawer-container class="example-container">
+    <!-- mode="over" it will open sidenav over the content -->
+    <!-- side, over,push -->
+    <mat-drawer mode="side"  [(opened)]="opened" >
+      <div class="settings">
+        <!-- <button class="settings"mat-icon-button style="">
+          <span class="material-symbols-outlined" style="opacity:50%">
+            settings
+          </span>
+        </button> -->
+        <!-- <button class="settings"mat-icon-button style="">
+          <span class="material-symbols-outlined" style="opacity:50%;">
+            add
+          </span>
+        </button> -->
+
+      </div>
+
+      <!-- <div class="input-group flex-nowrap" style="">
+        <input style="border-radius: 5rem;" type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="addon-wrapping">
+      </div> -->
+      <mat-list>
+
+          <a style="text-decoration: none; cursor:pointer" (click)="status('Notes')" (click)="isSmallScreenMethod()">
+            <mat-list-item style="cursor:pointer;"> Notes </mat-list-item>
+          </a>
+        <mat-divider></mat-divider>
+
+          <a style="text-decoration: none; cursor:pointer" (click)="status('Archive')" (click)="isSmallScreenMethod()">
+            <mat-list-item style="cursor:pointer;"> Archive </mat-list-item>
+          </a>
+        <mat-divider></mat-divider>
+          <a style="text-decoration: none; cursor:pointer" (click)="status('Bin')" (click)="isSmallScreenMethod()">
+            <mat-list-item style="cursor:pointer;"> Bin </mat-list-item>
+          </a>
+          <mat-divider></mat-divider>
+          <a style="text-decoration: none; cursor:pointer" (click)="status('TODO')" (click)="isSmallScreenMethod()">
+            <mat-list-item style="cursor:pointer;"> To Do List </mat-list-item>
+          </a>
+          <mat-divider></mat-divider>
+
+
+    </mat-list>
+  </mat-drawer>
+    <mat-drawer-content style="padding-bottom: 50px;">
+      <!-- Main Content Here -->
+      <app-notes *ngIf="flag === 'Notes'"></app-notes>
+      <app-show-notes *ngIf="flag === 'Notes'"></app-show-notes>
+      <app-archive *ngIf="flag === 'Archive'"></app-archive>
+      <app-todolist *ngIf="flag === 'TODO'"></app-todolist>
+  </mat-drawer-content>
+  </mat-drawer-container>
+
+
+</body>
+

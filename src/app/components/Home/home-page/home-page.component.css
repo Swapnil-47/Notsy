@@ -1,0 +1,66 @@
+.example-form {
+  min-width: 150px;
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  margin-top: 1.3rem;
+  padding: 1rem
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.submit {
+  float: right;
+}
+
+mat-drawer {
+  padding: 0.3rem;
+  width: 15rem
+}
+
+mat-drawer-container {
+  height: 100%;
+}
+
+/* Always keep the common breakpoints for responsive design in mind.
+The former usually matches common screen sizes (480px, 768px, 1024px, and 1280px). */
+.input-group {
+  width: 11rem;
+  margin: 0.5rem;
+}
+.settings {
+  margin-left:5.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  form {
+    width: 13rem;
+  }
+
+  .submit {
+    margin: auto
+  }
+
+  mat-drawer {
+    width:100%
+  }
+  .input-group {
+    width: 9rem;
+    margin: 0.5rem;
+  }
+  .settings {
+    margin-left:4.0rem;
+  }
+  .input-group {
+    width: 100%;
+    margin: 0.1rem;
+  }
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+/*  */
