@@ -5,7 +5,8 @@
 
 }
 body{
-  padding-top:4rem
+  padding-top:4rem;
+  padding:1.3rem
 }
 .header{
   font-family: 'Kalam', cursive;
