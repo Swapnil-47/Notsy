@@ -89,6 +89,7 @@ export class TODOService {
       this.getNotes();
       this.getArchiveNotes()
     })
+    this.router.navigate(['/Home']);
   }
 
   archivePost(id:any){
